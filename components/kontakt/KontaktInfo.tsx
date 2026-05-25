@@ -4,7 +4,6 @@ export default function KontaktInfo() {
       <div className="container">
         <div className="kontakt-info-grid">
           <div className="kontakt-info-left reveal">
-            <span className="label">Přijďte</span>
             <h2>Kontaktujte nás</h2>
             <p className="kontakt-info-lead">Rádi vám odpovíme na všechny vaše otázky.</p>
 
@@ -52,11 +51,12 @@ export default function KontaktInfo() {
             </div>
           </div>
 
-          <div className="kontakt-info-right reveal reveal-d1">
-            <div className="kontakt-info-img">
+          <div className="kontakt-info-right reveal reveal-d1" style={{ maxWidth: "80%", marginLeft: "auto" }}>
+            <div className="kontakt-info-img" style={{ height: "auto" }}>
               <img
-                src="/images/kafeterka/gm61.jpg"
-                alt="Kafeterka interiér"
+                src="/images/kafeterka/gm54.jpg"
+                alt="Kafeterka exteriér"
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />
             </div>
           </div>

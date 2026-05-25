@@ -11,9 +11,11 @@ export default function HeroKontakt() {
       </div>
       <div className="container">
         <div className="hero-content">
-          <span className="label label-light">Přijďte</span>
-          <h1>Jsme tu pro vás</h1>
-          <p>
+          <h1>
+            <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontStyle: "normal" }}>Jsme tu</span>
+            {" "}pro vás
+          </h1>
+          <p style={{ color: "#fff" }}>
             Najdete nás na Mariánském náměstí v Uherském Brodě.<br />
             Rezervujte si místo nebo nás kontaktujte.
           </p>

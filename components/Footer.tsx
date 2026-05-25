@@ -2,13 +2,21 @@ import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer" id="rezervace">
+    <footer
+      className="footer"
+      id="rezervace"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)), url('/images/kafeterka/terasa.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container">
         <div className="footer-main">
 
           <div className="footer-brand">
             <a href="/" aria-label="Kafeterka – domovská stránka" style={{ display: "inline-block", color: "#fff" }}>
-              <Logo height={40} />
+              <Logo height={95} />
             </a>
             <p>Útulná kavárna na Mariánském náměstí v Uherském Brodě. Čerstvé dorty a výběrová káva každý den.</p>
             <div className="footer-social">

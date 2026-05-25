@@ -10,57 +10,44 @@ export default function Vyhody() {
 
         <div className="vyhody-grid">
 
-          {/* Card 1 – text only, small thumbnail, compact */}
           <div className="vyhody-card reveal">
             <div className="vyhody-card-body">
               <div className="vyhody-card-thumb">
                 <img
-                  src="/images/kafeterka/leila16.jpg"
-                  alt="Kafeterka – čerstvé zákusky"
+                  src="/images/kafeterka/dort-pistacio.png"
+                  alt="Kafeterka – pistáciový dort s kávovými zrny"
                 />
               </div>
               <p className="eyebrow">Čerstvost</p>
               <h3>Pečeme každý den podle objednávky</h3>
               <p>Dorty pečeme čerstvě přímo pro vás, nikdy neskladujeme hotové výrobky zbytečně dlouho.</p>
-              <div className="vyhody-tags">
-                <span className="vyhody-tag">Dort</span>
-                <span className="vyhody-tag">Volba</span>
-              </div>
-              <a href="#objednat" className="link-arrow" style={{ marginTop: 18, display: "inline-flex", alignItems: "center", gap: 6 }}>
-                Více <span aria-hidden="true">→</span>
-              </a>
             </div>
           </div>
 
-          {/* Card 2 – full-width photo at top, text below */}
           <div className="vyhody-card reveal reveal-d1">
             <div className="vyhody-card-img">
               <img
-                src="/images/kafeterka/gm45.jpg"
-                alt="Kafeterka – dort s kávou na tácu"
+                src="/images/kafeterka/dort-citron.png"
+                alt="Kafeterka – citronový dort s borůvkami"
               />
             </div>
             <div className="vyhody-card-body">
               <p className="eyebrow">Kvalita</p>
-              <h3>Přírodní a vybrané podle vašich přání</h3>
-              <p style={{ fontSize: "0.78rem", fontWeight: 600, color: "var(--green)", margin: "6px 0 8px", letterSpacing: "0.04em" }}>
-                Poctivé
-              </p>
+              <h3>Poctivé a vybrané podle vašich přání</h3>
               <p>Používáme jen nejlepší lokální ingredience bez zbytečných příměsí.</p>
             </div>
           </div>
 
-          {/* Card 3 – featured, larger photo, more text */}
           <div className="vyhody-card featured reveal reveal-d2">
             <div className="vyhody-card-img lg">
               <img
-                src="/images/kafeterka/gm40.jpg"
-                alt="Kafeterka – personál s dortem na objednávku"
+                src="/images/kafeterka/dort-ruzovy.png"
+                alt="Kafeterka – růžový dort se zlatými kuličkami"
               />
             </div>
             <div className="vyhody-card-body">
               <p className="eyebrow">Design</p>
-              <h3>Dorty navržené přesně podle vašich představ</h3>
+              <h3>S dorty si dáváme záležet aby byly vizuálně krásné.</h3>
               <p>
                 Každý dort je unikátní výtvor s osobní konzultací — od příchutě po vizuální zpracování.
                 Rádi se přizpůsobíme každé příležitosti a vašim konkrétním požadavkům.

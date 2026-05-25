@@ -1,10 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Logo from "@/components/Logo";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const activeStyle = { color: "#1E1E1A", fontWeight: 700 };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -24,15 +29,15 @@ export default function Header() {
         <div className="container">
           <div className="header-inner">
             <a href="/" className="logo" aria-label="Kafeterka – domovská stránka">
-              <Logo height={34} className="logo-svg" />
+              <Logo height={48} className="logo-svg" />
             </a>
 
             <nav className="nav" aria-label="Hlavní navigace">
-              <a href="/">Domů</a>
-              <a href="/menu">Menu</a>
-              <a href="/kontakt">Kontakt</a>
-              <a href="/kontakt#rezervace">Rezervace</a>
-              <a href="/dorty-na-objednavku">Dorty</a>
+              <a href="/" style={isActive("/") ? activeStyle : undefined}>Domů</a>
+              <a href="/menu" style={isActive("/menu") ? activeStyle : undefined}>Menu</a>
+              <a href="/kontakt" style={isActive("/kontakt") ? activeStyle : undefined}>Kontakt</a>
+              <a href="/dorty-na-objednavku" style={isActive("/dorty-na-objednavku") ? activeStyle : undefined}>Dorty</a>
+              <a href="/fotogalerie" style={isActive("/fotogalerie") ? activeStyle : undefined}>Fotogalerie</a>
             </nav>
 
             <div className="header-actions">
@@ -57,11 +62,11 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         <nav className="mobile-nav">
-          <a href="/" onClick={closeMenu}>Domů</a>
-          <a href="/menu" onClick={closeMenu}>Menu</a>
-          <a href="/kontakt" onClick={closeMenu}>Kontakt</a>
-          <a href="/kontakt#rezervace" onClick={closeMenu}>Rezervace</a>
-          <a href="/dorty-na-objednavku" onClick={closeMenu}>Dorty</a>
+          <a href="/" onClick={closeMenu} style={isActive("/") ? activeStyle : undefined}>Domů</a>
+          <a href="/menu" onClick={closeMenu} style={isActive("/menu") ? activeStyle : undefined}>Menu</a>
+          <a href="/kontakt" onClick={closeMenu} style={isActive("/kontakt") ? activeStyle : undefined}>Kontakt</a>
+          <a href="/dorty-na-objednavku" onClick={closeMenu} style={isActive("/dorty-na-objednavku") ? activeStyle : undefined}>Dorty</a>
+          <a href="/fotogalerie" onClick={closeMenu} style={isActive("/fotogalerie") ? activeStyle : undefined}>Fotogalerie</a>
         </nav>
         <div className="mobile-cta">
           <a href="/kontakt#rezervace" className="btn btn-outline" onClick={closeMenu}>Rezervace</a>

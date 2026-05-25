@@ -296,6 +296,7 @@ p  { font-size: 0.9375rem; color: var(--kf-muted); line-height: 1.75; }
   transition: all 0.22s var(--ease);
 }
 .nav a:hover { color: var(--green-deep); background: var(--green-light); }
+.nav a.active { color: var(--kf-text); font-weight: 600; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
 
 .hamburger {

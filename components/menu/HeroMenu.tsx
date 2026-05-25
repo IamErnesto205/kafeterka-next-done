@@ -11,10 +11,15 @@ export default function HeroMenu() {
       <div className="hero-overlay" aria-hidden="true" />
 
       <div className="container">
-        <div className="hero-content">
-          <div className="hero-badge">Dneska v Kafeterce</div>
-          <h1>Co máme dnes</h1>
-          <p className="hero-sub">
+        <div className="hero-content" style={{ textAlign: "center" }}>
+          <h1 style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontStyle: "normal" }}>
+            Přijďte si k nám na
+            <br />
+            <span style={{ fontFamily: "var(--font-display)", fontWeight: 400, fontStyle: "italic" }}>
+              matchu, dort, kafe nebo sandwich.
+            </span>
+          </h1>
+          <p className="hero-sub" style={{ textAlign: "center", margin: "0 auto 44px" }}>
             Dorty pečeme každý den s výběrem z nejlepších surovin — kvůli vzpomínkám a chutím, které zůstávají.
           </p>
           <div className="hero-cta">
@@ -22,10 +27,6 @@ export default function HeroMenu() {
             <a href="/#rezervace" className="btn btn-ghost-white">Rezervovat</a>
           </div>
         </div>
-      </div>
-
-      <div className="hero-scroll" aria-hidden="true">
-        <div className="hero-scroll-line" />
       </div>
     </section>
   );

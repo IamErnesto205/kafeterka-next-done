@@ -28,11 +28,19 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="faq section" id="faq">
+    <section
+      className="faq section"
+      id="faq"
+      style={{
+        backgroundImage: "linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)), url('/images/kafeterka/menu-spread.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container">
-        <div className="section-header reveal">
-          <h2>Otázky</h2>
-          <p>Odpovědi na nejčastější dotazy o našich dortech a službách</p>
+        <div className="section-header reveal" style={{ color: "#fff" }}>
+          <h2 style={{ color: "#fff" }}>Otázky</h2>
+          <p style={{ color: "rgba(255,255,255,0.8)" }}>Odpovědi na nejčastější dotazy o našich dortech a službách</p>
         </div>
 
         <div className="faq-wrap reveal">
@@ -40,13 +48,15 @@ export default function Faq() {
             <div
               key={i}
               className={`faq-item${open === i ? " open" : ""}`}
+              style={{ borderColor: "rgba(255,255,255,0.2)" }}
             >
               <button
                 className="faq-btn"
                 aria-expanded={open === i}
                 onClick={() => setOpen(open === i ? null : i)}
+                style={{ color: "#fff" }}
               >
-                <h3>{item.q}</h3>
+                <h3 style={{ color: "#fff" }}>{item.q}</h3>
                 <span className="faq-ico" aria-hidden="true">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M6 1V11M1 6H11" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
@@ -55,7 +65,7 @@ export default function Faq() {
               </button>
               <div className="faq-body">
                 <div className="faq-body-inner">
-                  <p>{item.a}</p>
+                  <p style={{ color: "rgba(255,255,255,0.85)" }}>{item.a}</p>
                 </div>
               </div>
             </div>

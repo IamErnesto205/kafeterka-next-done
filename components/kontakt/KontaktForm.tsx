@@ -11,8 +11,24 @@ export default function KontaktForm() {
   }
 
   return (
-    <section className="kontakt-form-section section">
-      <div className="container">
+    <section className="kontakt-form-section section" style={{ position: "relative", overflow: "hidden" }}>
+      <img
+        src="/images/icons/ruce.svg"
+        alt=""
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          left: "-80px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          height: "120%",
+          width: "auto",
+          opacity: 0.3,
+          pointerEvents: "none",
+          userSelect: "none",
+        }}
+      />
+      <div className="container" style={{ position: "relative", zIndex: 1 }}>
         <div className="kontakt-form-grid">
           <div className="kontakt-form-left reveal">
             <span className="label">Napište nám</span>

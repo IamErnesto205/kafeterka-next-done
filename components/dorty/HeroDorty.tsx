@@ -3,7 +3,7 @@ export default function HeroDorty() {
     <section className="hero hero-page" aria-label="Dorty na objednávku">
       <div className="hero-bg">
         <img
-          src="/images/kafeterka/gm38.jpg"
+          src="/images/kafeterka/dort-hero.png"
           alt="Kafeterka – dort na objednávku"
           loading="eager"
         />
@@ -11,10 +11,13 @@ export default function HeroDorty() {
       <div className="hero-overlay" aria-hidden="true" />
 
       <div className="container">
-        <div className="hero-content">
+        <div className="hero-content" style={{ textAlign: "center" }}>
           <div className="hero-badge">Na míru pro každou příležitost</div>
-          <h1>Dorty na objednávku</h1>
-          <p className="hero-sub">
+          <h1>
+            <span style={{ fontFamily: "var(--font-body)", fontWeight: 600, fontStyle: "normal" }}>Dorty</span>
+            {" "}na objednávku
+          </h1>
+          <p className="hero-sub" style={{ textAlign: "center", margin: "0 auto 44px" }}>
             Každý dort přizpůsobený vaší oslavě a vašim představám, pečený čerstvě s poctivými ingrediencemi.
           </p>
           <div className="hero-cta">

@@ -8,48 +8,17 @@ export default function Poloha() {
           <p>Kafeterka sídlí na Mariánském náměstí v srdci Uherského Brodu.</p>
         </div>
 
-        <div className="poloha-cards">
-          <div className="poloha-card reveal">
-            <div className="poloha-card-img">
-              <img
-                src="/images/kafeterka/leila5.jpg"
-                alt="Uherský Brod"
-              />
-            </div>
-            <div className="poloha-card-body">
-              <h3>Uherský Brod</h3>
-              <p>Mariánské náměstí, Uherský Brod, Česká republika</p>
-              <a
-                href="https://maps.google.com/?q=Mariánské+náměstí,+Uherský+Brod"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="poloha-link"
-              >
-                Otevřít mapy <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-
-          <div className="poloha-card reveal reveal-d1">
-            <div className="poloha-card-img">
-              <img
-                src="/images/kafeterka/leila6.jpg"
-                alt="Parkování"
-              />
-            </div>
-            <div className="poloha-card-body">
-              <h3>Parkování</h3>
-              <p>Parkování je dostupné na náměstí a v okolí bez problémů.</p>
-              <a
-                href="https://maps.google.com/?q=Mariánské+náměstí,+Uherský+Brod"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="poloha-link"
-              >
-                Navigovat <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+        <div className="reveal" style={{ borderRadius: "16px", overflow: "hidden", marginTop: "40px" }}>
+          <iframe
+            src="https://maps.google.com/maps?q=Kafeterka+Mariánské+náměstí+308+Uherský+Brod&output=embed&z=16&hl=cs"
+            width="100%"
+            height="480"
+            style={{ border: "none", display: "block" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Poloha Kafeterky na mapě"
+          />
         </div>
       </div>
     </section>

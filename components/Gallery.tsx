@@ -50,6 +50,12 @@ export default function Gallery() {
             </div>
           </div>
         </div>
+
+        <div className="reveal" style={{ textAlign: "center", marginTop: "40px" }}>
+          <a href="/fotogalerie" className="btn btn-outline">
+            Celá fotogalerie <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
   );

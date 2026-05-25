@@ -3,11 +3,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroMenu from "@/components/menu/HeroMenu";
-import StatsIntro from "@/components/menu/StatsIntro";
 import NaseMenuPricing from "@/components/menu/NaseMenuPricing";
-import Ingredience from "@/components/menu/Ingredience";
-import FeaturesAlt from "@/components/menu/FeaturesAlt";
-import GalleryMenu from "@/components/menu/GalleryMenu";
 import CtaMenu from "@/components/menu/CtaMenu";
 
 export const metadata: Metadata = {
@@ -22,11 +18,7 @@ export default function MenuPage() {
       <Header />
       <main>
         <HeroMenu />
-        <StatsIntro />
         <NaseMenuPricing />
-        <Ingredience />
-        <FeaturesAlt />
-        <GalleryMenu />
         <CtaMenu />
       </main>
       <Footer />

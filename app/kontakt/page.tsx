@@ -7,8 +7,6 @@ import KontaktInfo from "@/components/kontakt/KontaktInfo";
 import KontaktForm from "@/components/kontakt/KontaktForm";
 import Poloha from "@/components/kontakt/Poloha";
 import RezervaceKontakt from "@/components/kontakt/RezervaceKontakt";
-import FaqKontakt from "@/components/kontakt/FaqKontakt";
-import GalleryKontakt from "@/components/kontakt/GalleryKontakt";
 
 export const metadata: Metadata = {
   title: "Kontakt & Rezervace – Kafeterka Uherský Brod",
@@ -26,8 +24,6 @@ export default function KontaktPage() {
         <KontaktForm />
         <Poloha />
         <RezervaceKontakt />
-        <FaqKontakt />
-        <GalleryKontakt />
       </main>
       <Footer />
     </>
