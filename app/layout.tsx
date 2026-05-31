@@ -20,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LYFrv8QYM6" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LYFRV8QYHW" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-LYFrv8QYM6');
+          gtag('config', 'G-LYFRV8QYHW');
         `}</Script>
         {children}
         <CookieBanner />
