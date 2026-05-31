@@ -4,7 +4,7 @@ import { useState } from "react";
 const items = [
   {
     q: "Jak objednám dort?",
-    a: "Můžete nás kontaktovat telefonicky nebo napsat přes Instagram nebo kontaktní formulář. Domluvíme termín, velikost a chuť dortu.",
+    a: "Můžete nás kontaktovat přes formulář nebo napsat přímo na e-mail kafeterka@email.cz. Domluvíme termín, velikost a chuť dortu.",
   },
   {
     q: "Jak dlouho trvá příprava?",

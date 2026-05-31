@@ -7,6 +7,7 @@ import Features from "@/components/Features";
 import Suroviny from "@/components/Suroviny";
 import Gallery from "@/components/Gallery";
 import SocialSection from "@/components/SocialSection";
+import Drby from "@/components/Drby";
 import CtaBanner from "@/components/CtaBanner";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -25,6 +26,7 @@ export default function Home() {
         <Suroviny />
         <Gallery />
         <SocialSection />
+        <Drby />
         <CtaBanner />
 <Faq />
         <Contact />

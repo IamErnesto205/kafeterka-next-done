@@ -60,14 +60,15 @@ export default function SocialSection() {
               <span style={{ fontSize: "clamp(1.44rem, 2.8vw, 2.4rem)" }}>Sledujte nás i na</span>
               <br />
               <strong style={{ fontWeight: 600, fontFamily: "var(--font-body)" }}>
-                <span style={{
+                <a href="https://www.instagram.com/kafeterka/" target="_blank" rel="noopener noreferrer" style={{
                   background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                }}>instagramu</span>
+                  textDecoration: "none",
+                }}>instagramu</a>
                 {" a "}
-                <span style={{ color: "#1877F2" }}>facebooku</span>
+                <a href="https://www.facebook.com/KAFETERKAUB/" target="_blank" rel="noopener noreferrer" style={{ color: "#1877F2", textDecoration: "none" }}>facebooku</a>
               </strong>
             </h2>
             <p style={{ color: "var(--kf-muted)", marginBottom: "36px", fontSize: "1.05rem" }}>

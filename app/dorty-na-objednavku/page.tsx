@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import HeroDorty from "@/components/dorty/HeroDorty";
 import Vyhody from "@/components/dorty/Vyhody";
 import NaseDortyGallery from "@/components/dorty/NaseDortyGallery";
-import TarifyCake from "@/components/dorty/TarifyCake";
 import FaqDorty from "@/components/dorty/FaqDorty";
 import KontaktDotazy from "@/components/dorty/KontaktDotazy";
 import ObjednatForm from "@/components/dorty/ObjednatForm";
@@ -26,7 +25,6 @@ export default function DortyNaObjednavku() {
         <HeroDorty />
         <Vyhody />
         <NaseDortyGallery />
-        <TarifyCake />
         <FaqDorty />
         <KontaktDotazy />
         <ObjednatForm />

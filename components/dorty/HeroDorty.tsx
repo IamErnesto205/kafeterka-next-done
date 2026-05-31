@@ -21,15 +21,11 @@ export default function HeroDorty() {
             Každý dort přizpůsobený vaší oslavě a vašim představám, pečený čerstvě s poctivými ingrediencemi.
           </p>
           <div className="hero-cta">
-            <a href="#objednat" className="btn btn-white">Objednat</a>
-            <a href="#rezervace" className="btn btn-ghost-white">Rezervovat</a>
+            <a href="#objednat" className="btn btn-white">Objednat dort</a>
           </div>
         </div>
       </div>
 
-      <div className="hero-scroll" aria-hidden="true">
-        <div className="hero-scroll-line" />
-      </div>
     </section>
   );
 }

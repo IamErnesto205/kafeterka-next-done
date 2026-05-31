@@ -27,7 +27,7 @@ export default function Suroviny() {
             <div className="card-text reveal">
               <p className="eyebrow">Denní rutina</p>
               <h3>Pečeme ráno, servírujeme celý den.</h3>
-              <p>Každé ráno voní Kafeterka čerstvě upečeným těstem. Přijďte ještě teplé.</p>
+              <p>Každé ráno voní Kafeterka čerstvě upečeným těstem.</p>
               <a href="#dorty" className="link-arrow">Objednat <span aria-hidden="true">→</span></a>
             </div>
 

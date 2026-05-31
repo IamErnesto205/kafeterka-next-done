@@ -15,7 +15,7 @@ export default function Gallery() {
               alt="Kafeterka – káva a dort na stole"
             />
             <div className="g-overlay">
-              <span className="g-caption">Útulný interiér Kafeterky</span>
+              <span className="g-caption">Dorty a kávové speciality</span>
             </div>
           </div>
 
@@ -25,14 +25,14 @@ export default function Gallery() {
                 src="/images/kafeterka/gm53.jpg"
                 alt="Kafeterka – domácí dort s ovocem"
               />
-              <div className="g-overlay"><span className="g-caption">Domácí dort</span></div>
+              <div className="g-overlay"><span className="g-caption">Káva a domácí dorty</span></div>
             </div>
             <div className="gallery-thumb">
               <img
                 src="/images/kafeterka/leila2.jpg"
                 alt="Kafeterka – latte art výběrová káva"
               />
-              <div className="g-overlay"><span className="g-caption">Výběrová káva</span></div>
+              <div className="g-overlay"><span className="g-caption">Bar Kafeterky</span></div>
             </div>
             <div className="gallery-thumb">
               <img
@@ -46,7 +46,7 @@ export default function Gallery() {
                 src="/images/kafeterka/leila11.jpg"
                 alt="Kafeterka – čerstvé zákusky a dezerty"
               />
-              <div className="g-overlay"><span className="g-caption">Čerstvý dezert</span></div>
+              <div className="g-overlay"><span className="g-caption">Za barem</span></div>
             </div>
           </div>
         </div>

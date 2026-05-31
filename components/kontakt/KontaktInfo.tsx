@@ -29,7 +29,7 @@ export default function KontaktInfo() {
                 </div>
                 <div>
                   <span className="kontakt-detail-label">Zavolejte nám</span>
-                  <a href="tel:+420572333456" className="kontakt-detail-value">+420 572 333 456</a>
+                  <a href="tel:+420774295710" className="kontakt-detail-value">774 295 710</a>
                 </div>
               </div>
 
@@ -42,8 +42,8 @@ export default function KontaktInfo() {
                 </div>
                 <div>
                   <span className="kontakt-detail-label">Adresa</span>
-                  <span className="kontakt-detail-value">Mariánské náměstí, Uherský Brod, Česká republika</span>
-                  <a href="https://maps.google.com/?q=Mariánské+náměstí,+Uherský+Brod" target="_blank" rel="noopener noreferrer" className="kontakt-map-link">
+                  <span className="kontakt-detail-value">Mariánské nám. 308, 688 01 Uherský Brod 1</span>
+                  <a href="https://maps.google.com/?q=Mariánské+nám.+308,+688+01+Uherský+Brod" target="_blank" rel="noopener noreferrer" className="kontakt-map-link">
                     Mapy <span aria-hidden="true">→</span>
                   </a>
                 </div>

@@ -19,7 +19,7 @@ export default function Features() {
               </div>
               <h3>Čerstvé dorty</h3>
               <p>Pečeme každý den a nepoužíváme kompromisy v poctivosti.</p>
-              <a href="#dorty" className="feature-more">Objednat <span aria-hidden="true">→</span></a>
+              <a href="/dorty-na-objednavku#objednat" className="feature-more">Objednat dort <span aria-hidden="true">→</span></a>
             </div>
 
             <div className="feature-card reveal reveal-d1">
@@ -28,7 +28,6 @@ export default function Features() {
               </div>
               <h3>Výběrová káva</h3>
               <p>Speciality připravujeme s vášní a jemným řemeslem.</p>
-              <a href="#o-nas" className="feature-more">Menu <span aria-hidden="true">→</span></a>
             </div>
 
             <div className="feature-card reveal reveal-d2">
@@ -46,7 +45,7 @@ export default function Features() {
               </div>
               <h3>Osobní přístup</h3>
               <p>Známe naše hosty a jejich oblíbené dezerty a nápoje.</p>
-              <a href="#kontakt" className="feature-more">Kontakt <span aria-hidden="true">→</span></a>
+              <a href="/kontakt" className="feature-more">Kontakt <span aria-hidden="true">→</span></a>
             </div>
 
             <div className="feature-card reveal reveal-d2">
@@ -55,7 +54,7 @@ export default function Features() {
               </div>
               <h3>Místo pro setkání</h3>
               <p>Na kávu, oslavu, práci nebo chvíli klidu.</p>
-              <a href="#rezervace" className="feature-more">Rezervovat <span aria-hidden="true">→</span></a>
+              <a href="/kontakt" className="feature-more">Kontakt <span aria-hidden="true">→</span></a>
             </div>
 
             <div className="feature-card reveal reveal-d3">

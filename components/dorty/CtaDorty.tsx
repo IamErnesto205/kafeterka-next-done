@@ -22,7 +22,7 @@ export default function CtaDorty() {
           />
           <h2>Objednejte si dort na svou oslavu</h2>
           <p>Každý dort je připraven s láskou a s poctivými ingrediencemi.</p>
-          <a href="#objednat" className="btn btn-white">Objednat</a>
+          <a href="#objednat" className="btn btn-white">Objednat dort</a>
         </div>
       </div>
     </section>

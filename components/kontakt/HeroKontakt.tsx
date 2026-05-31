@@ -20,8 +20,7 @@ export default function HeroKontakt() {
             Rezervujte si místo nebo nás kontaktujte.
           </p>
           <div className="hero-btns">
-            <a href="#rezervace" className="btn btn-white">Rezervovat</a>
-            <a href="#kontakt" className="btn btn-ghost-white">Kontakt</a>
+            <a href="#kontakt" className="btn btn-white">Kontakt</a>
           </div>
         </div>
       </div>

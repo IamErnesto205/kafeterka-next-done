@@ -23,8 +23,7 @@ export default function CtaBanner() {
           <h2>Objednejte si dort</h2>
           <p>Vyberte si z našich domácích dortů nebo si nechte připravit vlastní na míru.</p>
           <div className="cta-btns">
-            <a href="#kontakt" className="btn btn-white">Objednat</a>
-            <a href="#rezervace" className="btn btn-ghost-white">Rezervovat stůl</a>
+            <a href="/dorty-na-objednavku#objednat" className="btn btn-white">Objednat dort</a>
           </div>
         </div>
       </div>

@@ -6,10 +6,8 @@ import HeroKontakt from "@/components/kontakt/HeroKontakt";
 import KontaktInfo from "@/components/kontakt/KontaktInfo";
 import KontaktForm from "@/components/kontakt/KontaktForm";
 import Poloha from "@/components/kontakt/Poloha";
-import RezervaceKontakt from "@/components/kontakt/RezervaceKontakt";
-
 export const metadata: Metadata = {
-  title: "Kontakt & Rezervace – Kafeterka Uherský Brod",
+  title: "Kontakt – Kafeterka Uherský Brod",
   description: "Najdete nás na Mariánském náměstí v Uherském Brodě. Rezervujte si místo nebo nás kontaktujte.",
 };
 
@@ -23,7 +21,6 @@ export default function KontaktPage() {
         <KontaktInfo />
         <KontaktForm />
         <Poloha />
-        <RezervaceKontakt />
       </main>
       <Footer />
     </>

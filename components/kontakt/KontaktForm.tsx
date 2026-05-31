@@ -3,15 +3,23 @@ import { useState } from "react";
 
 export default function KontaktForm() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ jmeno: "", email: "", zprava: "", souhlas: false });
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
+    await fetch("/api/kontakt", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jmeno: form.jmeno, email: form.email, zprava: form.zprava }),
+    });
+    setLoading(false);
     setSent(true);
   }
 
   return (
-    <section className="kontakt-form-section section" style={{ position: "relative", overflow: "hidden" }}>
+    <section className="kontakt-form-section section" id="kontakt-form" style={{ position: "relative", overflow: "hidden" }}>
       <img
         src="/images/icons/ruce.svg"
         alt=""
@@ -85,7 +93,7 @@ export default function KontaktForm() {
                   />
                   <label htmlFor="souhlas">Souhlasím s podmínkami</label>
                 </div>
-                <button type="submit" className="btn btn-primary">Odeslat</button>
+                <button type="submit" className="btn btn-primary" disabled={loading}>{loading ? "Odesílám…" : "Odeslat"}</button>
               </form>
             )}
           </div>

@@ -11,13 +11,13 @@ export default function Vyhody() {
         <div className="vyhody-grid">
 
           <div className="vyhody-card reveal">
+            <div className="vyhody-card-img">
+              <img
+                src="/images/kafeterka/dort-pistacio.png"
+                alt="Kafeterka – pistáciový dort s kávovými zrny"
+              />
+            </div>
             <div className="vyhody-card-body">
-              <div className="vyhody-card-thumb">
-                <img
-                  src="/images/kafeterka/dort-pistacio.png"
-                  alt="Kafeterka – pistáciový dort s kávovými zrny"
-                />
-              </div>
               <p className="eyebrow">Čerstvost</p>
               <h3>Pečeme každý den podle objednávky</h3>
               <p>Dorty pečeme čerstvě přímo pro vás, nikdy neskladujeme hotové výrobky zbytečně dlouho.</p>

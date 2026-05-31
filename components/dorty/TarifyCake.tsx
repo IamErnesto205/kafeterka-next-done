@@ -26,7 +26,7 @@ export default function TarifyCake() {
               <span className="price-num">450</span>
               <span className="price-unit">Kč</span>
             </div>
-            <a href="#objednat" className="p-btn">Objednat</a>
+            <a href="#objednat" className="p-btn">Objednat dort</a>
             <div className="p-features">
               <div className="p-feature"><CheckIcon />Čerstvé ingredience</div>
               <div className="p-feature"><CheckIcon />Volba příchutí</div>
@@ -42,7 +42,7 @@ export default function TarifyCake() {
               <span className="price-num">750</span>
               <span className="price-unit">Kč</span>
             </div>
-            <a href="#objednat" className="p-btn">Objednat</a>
+            <a href="#objednat" className="p-btn">Objednat dort</a>
             <div className="p-features">
               <div className="p-feature"><CheckIcon />Individuální úpravy</div>
               <div className="p-feature"><CheckIcon />Vlastní design</div>

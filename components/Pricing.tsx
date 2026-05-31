@@ -42,7 +42,7 @@ export default function Pricing() {
               <span className="price-num">Od 450 Kč</span>
               <span className="price-unit">dle velikosti</span>
             </div>
-            <a href="#kontakt" className="p-btn">Objednat</a>
+            <a href="/dorty-na-objednavku#objednat" className="p-btn">Objednat dort</a>
             <div className="p-features">
               <div className="p-feature"><CheckIcon />Vlastní design</div>
               <div className="p-feature"><CheckIcon />Speciální příležitosti</div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { FlickeringGrid } from "@/components/ui/flickering-grid-hero";
 
 const LOGO_BASE64 = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNjMzIiBoZWlnaHQ9IjI3OTUiIHZpZXdCb3g9IjAgMCAzNjMzIDI3OTUiPgogIDxwYXRoIGQ9Ik0gMzQzMiAyNTIwIEwgMzM2NCAyNjYwIEwgMzMzMyAyNzMyIEwgMzM3MSAyNzMzIEwgMzM5OSAyNjc5IEwgMzUwNiAyNjc5IEwgMzUzMyAyNzMzIEwgMzU3MSAyNzMzIEwgMzU3MCAyNzI0IEwgMzQ3NyAyNTIzIEwgMzQ3MiAyNTE5IFoKTSAzNDUxIDI1NjAgTCAzNDU1IDI1NjIgTCAzNDkxIDI2NDIgTCAzNDg4IDI2NDUgTCAzNDE0IDI2NDQgWgpNIDI5MzAgMjUxOSBMIDI5MjcgMjU3OSBMIDI5MjggMjczMiBMIDI5NjMgMjczNCBMIDI5NjcgMjczMSBMIDI5NjggMjY1OSBMIDMwMTQgMjYyMiBMIDMwOTYgMjczMyBMIDMxNDEgMjczMyBMIDMxNDAgMjcyNSBMIDMwNDUgMjU5OSBMIDMwNDggMjU5MyBMIDMxMzIgMjUyNSBMIDMxMzMgMjUyMCBMIDMwNzkgMjUyMCBMIDI5NjkgMjYxMyBMIDI5NjcgMjUyMSBaCk0gMjUwOCAyNTE5IEwgMjUwNSAyNTIzIEwgMjUwNiAyNzMxIEwgMjUxMCAyNzM0IEwgMjU0MSAyNzM0IEwgMjU0NSAyNzMwIEwgMjU0NyAyNjQ2IEwgMjYxMCAyNjQ2IEwgMjY3MyAyNzM0IEwgMjcxMiAyNzM0IEwgMjcxMyAyNzI1IEwgMjY1NCAyNjQ1IEwgMjY4NiAyNjMwIEwgMjcwNSAyNjA1IEwgMjcwOCAyNTcwIEwgMjcwNSAyNTU4IEwgMjY5NyAyNTQ1IEwgMjY3OSAyNTI5IEwgMjY1NSAyNTIwIFoKTSAyNTQ1IDI1NTUgTCAyNjQ1IDI1NTQgTCAyNjYzIDI1NjUgTCAyNjY4IDI1NzYgTCAyNjY3IDI1OTAgTCAyNjU3IDI2MDQgTCAyNjM3IDI2MTIgTCAyNTQ3IDI2MTIgWgpNIDE2ODUgMjUyMCBMIDE2ODQgMjU1MSBMIDE2ODggMjU1NCBMIDE3NjYgMjU1NSBMIDE3NjYgMjczMCBMIDE3NjkgMjczNCBMIDE4MDQgMjczMyBMIDE4MDYgMjU1NSBMIDE4ODMgMjU1NCBMIDE4ODYgMjU1MSBMIDE4ODUgMjUyMCBaCk0gNTYwIDI1MjAgTCA0NjQgMjcyNiBMIDQ2NSAyNzMzIEwgNTA0IDI3MzIgTCA1MjcgMjY4MiBMIDUzMSAyNjc5IEwgNjM0IDI2NzkgTCA2NjIgMjczMyBMIDcwMCAyNzMzIEwgNzAxIDI3MjUgTCA2MDQgMjUyMiBMIDYwMCAyNTE5IFoKTSA1ODEgMjU2MiBMIDYxOSAyNjQxIEwgNjE3IDI2NDUgTCA1NDQgMjY0MyBaCk0gNjIgMjUxOSBMIDYxIDI3MzIgTCA5NSAyNzM0IEwgOTkgMjczMSBMIDEwMCAyNjYwIEwgMTQ1IDI2MjMgTCAyMjcgMjczNCBMIDI2OSAyNzM0IEwgMjY5IDI3MjQgTCAxNzQgMjU5OSBMIDI2NCAyNTI1IEwgMjY1IDI1MjEgTCAyMTEgMjUyMCBMIDEwMSAyNjEzIEwgMTAwIDI1MjMgTCA5NiAyNTE5IFoKTSAyMDk4IDI1MTkgTCAyMDk2IDI3MzIgTCAyMjg0IDI3MzMgTCAyMjg3IDI3MzAgTCAyMjg3IDI3MDEgTCAyMjgyIDI2OTcgTCAyMTQwIDI2OTggTCAyMTM1IDI2OTQgTCAyMTM1IDI2NDQgTCAyMTM4IDI2MzkgTCAyMjQzIDI2MzkgTCAyMjQ3IDI2MzUgTCAyMjQ3IDI2MTEgTCAyMjQzIDI2MDUgTCAyMTM3IDI2MDQgTCAyMTM2IDI1NTYgTCAyMjgwIDI1NTQgTCAyMjg0IDI1NTEgTCAyMjg0IDI1MjIgTCAyMjgwIDI1MTkgWgpNIDEzMDMgMjUxOSBMIDEzMDAgMjUyMyBMIDEzMDEgMjczMiBMIDE0ODYgMjczMyBMIDE0ODkgMjcwNCBMIDE0ODMgMjY5NyBMIDEzMzkgMjY5NSBMIDEzMzkgMjY0MyBMIDEzNDIgMjYzOSBMIDE0NDEgMjYzOSBMIDE0NDUgMjYzNiBMIDE0NDUgMjYwOCBMIDE0NDAgMjYwNCBMIDEzNDEgMjYwNCBMIDEzMzkgMjU1NiBMIDE0ODAgMjU1NCBMIDE0ODUgMjU0OSBMIDE0ODQgMjUyMSBMIDE0MDUgMjUxOCBaCk0gMTA4OCAyNTE5IEwgOTUzIDI1MTggTCA5MTYgMjUxOSBMIDkxMyAyNTIyIEwgOTE0IDI3MzMgTCA5NDkgMjczMyBMIDk1MiAyNzMwIEwgOTUyIDI2NDIgTCA5NTUgMjYzOSBMIDEwNDggMjYzOSBMIDEwNTMgMjYzNiBMIDEwNTMgMjYwOCBMIDEwNTAgMjYwNSBMIDk1NSAyNjA1IEwgOTUyIDI2MDIgTCA5NTIgMjU1NyBMIDk1NSAyNTU0IEwgMTA4NyAyNTU0IEwgMTA5MSAyNTQ5IEwgMTA5MSAyNTIzIFoKTSAyODgxIDQwNyBMIDI4NzggNDA0IEwgMjg1MiA0MDQgTCAyODQ4IDQwOCBMIDI4NDYgMjI2NyBMIDc2OSAyMjY3IEwgNzY2IDIyNjQgTCA3NjYgMjIwNCBMIDc2MiAyMjAwIEwgNzM4IDIyMDAgTCA3MzMgMjIwNiBMIDczMyAyMjk4IEwgNzM2IDIzMDEgTCAyODc5IDIzMDAgTCAyODgyIDIyNTYgWgpNIDczMyAzNjkgTCA3MzkgMzczIEwgNzYzIDM3MiBMIDc2NiAzNjcgTCA3NjggMTM3IEwgMTM4OCAxMzcgTCAxMzkyIDEzMyBMIDEzOTIgMTA1IEwgMTM4OCAxMDEgTCA3MzcgMTAxIEwgNzMzIDEwNSBMIDczMiAxNDYgWgpNIDU4OSA0MDkgTCA1ODcgMjEzNiBMIDU5MCAyMTQxIEwgODc1IDIxMzkgTCA4NzUgMTQ3MCBMIDEyMzIgMTE2NCBMIDEyMzggMTE2OCBMIDE2MDMgMTY1MSBMIDE5MzcgMjEwMyBMIDE5NTQgMjEyMCBMIDE5ODYgMjE0MSBMIDI0MTIgMjE0MCBMIDI0MTMgMzUwIEwgMzA1NCAzNDggTCAzMDU1IDYxIEwgMTQzMSA2MiBMIDE0MzAgMzQ1IEwgMTQzMyAzNDggTCAyMDYzIDM0OCBMIDIxMjMgMzUxIEwgMjEyMSAxOTE4IEwgMTg3NyAxNTc4IEwgMTQ0NCA5ODcgTCAyMDkzIDQxNiBMIDIwOTQgNDA4IEwgMTc0NiA0MDggTCA4NzggMTE1OSBMIDg3NSAxMTU4IEwgODc1IDQxMSBMIDg3MSA0MDcgWiIgZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPg==";
@@ -17,10 +17,31 @@ const logoMaskStyle: React.CSSProperties = {
 
 export default function ObjednatForm() {
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setError("");
+    setLoading(true);
+    const form = formRef.current!;
+    const data = {
+      jmeno: (form.elements.namedItem("jmeno") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      zprava: (form.elements.namedItem("zprava") as HTMLTextAreaElement).value,
+    };
+    const res = await fetch("/api/objednat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    setLoading(false);
+    if (res.ok) {
+      setSent(true);
+    } else {
+      setError("Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.");
+    }
   };
 
   return (
@@ -72,10 +93,10 @@ export default function ObjednatForm() {
                 <path d="M14 26 L22 34 L38 18" stroke="#3F5F48" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <h3 style={{ fontFamily: "var(--font-display)", color: "var(--kf-text)", marginBottom: 10 }}>Odesláno!</h3>
-              <p>Ozve se vám co nejdříve.</p>
+              <p>Ozveme se Vám co nejdříve.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate>
+            <form onSubmit={handleSubmit} ref={formRef} noValidate>
               <div className="form-field">
                 <label className="form-label" htmlFor="jmeno">Jméno</label>
                 <input
@@ -114,12 +135,13 @@ export default function ObjednatForm() {
               <div className="form-checkbox-wrap">
                 <input type="checkbox" id="souhlas" name="souhlas" required />
                 <label htmlFor="souhlas">
-                  Souhlasím s&nbsp;<a href="#" style={{ color: "var(--green)", textDecoration: "underline" }}>podmínkami</a> zpracování osobních údajů.
+                  Souhlasím s&nbsp;<a href="/podminky" target="_blank" rel="noopener noreferrer" style={{ color: "var(--green)", textDecoration: "underline" }}>podmínkami</a> zpracování osobních údajů.
                 </label>
               </div>
 
-              <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px" }}>
-                Odeslat
+              {error && <p style={{ color: "red", marginBottom: 12 }}>{error}</p>}
+              <button type="submit" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px" }} disabled={loading}>
+                {loading ? "Odesílám…" : "Odeslat"}
               </button>
             </form>
           )}

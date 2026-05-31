@@ -34,15 +34,14 @@ export default function Header() {
 
             <nav className="nav" aria-label="Hlavní navigace">
               <a href="/" style={isActive("/") ? activeStyle : undefined}>Domů</a>
-              <a href="/menu" style={isActive("/menu") ? activeStyle : undefined}>Menu</a>
               <a href="/kontakt" style={isActive("/kontakt") ? activeStyle : undefined}>Kontakt</a>
               <a href="/dorty-na-objednavku" style={isActive("/dorty-na-objednavku") ? activeStyle : undefined}>Dorty</a>
+              <a href="/akce" style={isActive("/akce") ? activeStyle : undefined}>Akce</a>
               <a href="/fotogalerie" style={isActive("/fotogalerie") ? activeStyle : undefined}>Fotogalerie</a>
             </nav>
 
             <div className="header-actions">
-              <a href="/kontakt#rezervace" className="btn btn-outline">Rezervace</a>
-              <a href="/dorty-na-objednavku#objednat" className="btn btn-primary">Objednat</a>
+              <a href="/dorty-na-objednavku#objednat" className="btn btn-primary">Objednat dort</a>
             </div>
 
             <button
@@ -63,13 +62,12 @@ export default function Header() {
       >
         <nav className="mobile-nav">
           <a href="/" onClick={closeMenu} style={isActive("/") ? activeStyle : undefined}>Domů</a>
-          <a href="/menu" onClick={closeMenu} style={isActive("/menu") ? activeStyle : undefined}>Menu</a>
           <a href="/kontakt" onClick={closeMenu} style={isActive("/kontakt") ? activeStyle : undefined}>Kontakt</a>
           <a href="/dorty-na-objednavku" onClick={closeMenu} style={isActive("/dorty-na-objednavku") ? activeStyle : undefined}>Dorty</a>
+          <a href="/akce" onClick={closeMenu} style={isActive("/akce") ? activeStyle : undefined}>Akce</a>
           <a href="/fotogalerie" onClick={closeMenu} style={isActive("/fotogalerie") ? activeStyle : undefined}>Fotogalerie</a>
         </nav>
         <div className="mobile-cta">
-          <a href="/kontakt#rezervace" className="btn btn-outline" onClick={closeMenu}>Rezervace</a>
           <a href="/dorty-na-objednavku#objednat" className="btn btn-primary" onClick={closeMenu}>Objednat dort</a>
         </div>
       </div>

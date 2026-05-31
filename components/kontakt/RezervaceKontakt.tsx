@@ -8,10 +8,11 @@ export default function RezervaceKontakt() {
         </div>
 
         <div className="rezervace-k-form-wrap reveal">
-          <a href="tel:+420572333456" className="btn btn-primary" style={{ fontSize: "1.1rem", padding: "16px 40px" }}>
-            +420 572 333 456
+          <p>Rezervace probíhají minimálně jeden den dopředu.</p>
+          <a href="tel:+420774295710" className="btn btn-primary" style={{ fontSize: "1.1rem", padding: "16px 40px" }}>
+            774 295 710
           </a>
-          <p className="rezervace-k-note">Voláme zpět, pokud nezastihnou. Otevřeno Po–So 9–17, Ne 9–16.</p>
+          <p className="rezervace-k-note">Otevřeno Po–So 9–17, Ne 9–16.</p>
         </div>
 
         <div className="rezervace-k-img reveal">
