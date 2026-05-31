@@ -17,6 +17,7 @@ export default function Hero() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Hodnocení na Mapy.com – 5,0 Fantastické"
+        className="mapy-badge-desktop"
         style={{
           position: "absolute",
           bottom: "2.5rem",
@@ -48,6 +49,19 @@ export default function Hero() {
           </p>
           <div className="hero-cta">
             <a href="/dorty-na-objednavku#objednat" className="btn btn-white">Objednat dort</a>
+            <a
+              href="https://mapy.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hodnocení na Mapy.com – 5,0 Fantastické"
+              className="mapy-badge-mobile"
+            >
+              <img
+                src="/images/kafeterka/mapy-hodnoceni.png"
+                alt="Mapy.com hodnocení 5,0 Fantastické"
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </a>
           </div>
         </div>
       </div>

@@ -23,16 +23,9 @@ export default function SocialSection() {
   return (
     <section style={{ background: "#fff", padding: "80px 0", position: "relative", overflow: "hidden" }}>
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
-        <div
-          className="reveal"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "64px",
-          }}
-        >
+        <div className="reveal social-layout">
           {/* Phone with levitate animation */}
-          <div style={{ flex: "0 0 auto", width: "min(340px, 45%)" }}>
+          <div className="social-phone-wrap">
             <img
               src="/images/kafeterka/instagram-phone.png"
               alt="Kafeterka na Instagramu"
@@ -46,18 +39,9 @@ export default function SocialSection() {
           </div>
 
           {/* Text + icons */}
-          <div style={{ flex: 1 }}>
-            <h2
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 400,
-                fontSize: "clamp(1.8rem, 3.5vw, 3rem)",
-                lineHeight: 1.15,
-                color: "var(--kf-text)",
-                marginBottom: "20px",
-              }}
-            >
-              <span style={{ fontSize: "clamp(1.44rem, 2.8vw, 2.4rem)" }}>Sledujte nás i na</span>
+          <div className="social-text">
+            <h2 className="social-heading">
+              <span className="social-heading-pre">Sledujte nás i na</span>
               <br />
               <strong style={{ fontWeight: 600, fontFamily: "var(--font-body)" }}>
                 <a href="https://www.instagram.com/kafeterka/" target="_blank" rel="noopener noreferrer" style={{
@@ -78,7 +62,7 @@ export default function SocialSection() {
           </div>
 
           {/* Logo vpravo */}
-          <div style={{ flex: "0 0 auto" }}>
+          <div className="social-logo">
             <Logo height={180} />
           </div>
         </div>
@@ -88,6 +72,46 @@ export default function SocialSection() {
         @keyframes levitate {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-14px); }
+        }
+        .social-layout {
+          display: flex;
+          align-items: center;
+          gap: 64px;
+        }
+        .social-phone-wrap {
+          flex: 0 0 auto;
+          width: min(340px, 45%);
+        }
+        .social-text { flex: 1; }
+        .social-logo { flex: 0 0 auto; }
+        .social-heading {
+          font-family: var(--font-display);
+          font-weight: 400;
+          font-size: clamp(1.8rem, 3.5vw, 3rem);
+          line-height: 1.15;
+          color: var(--kf-text);
+          margin-bottom: 20px;
+        }
+        .social-heading-pre {
+          font-size: clamp(1.44rem, 2.8vw, 2.4rem);
+        }
+        @media (max-width: 768px) {
+          .social-layout {
+            flex-direction: column;
+            gap: 32px;
+            align-items: flex-start;
+          }
+          .social-phone-wrap {
+            width: 55%;
+            margin: 0 auto;
+          }
+          .social-logo { display: none; }
+          .social-heading {
+            font-size: 1.6rem;
+          }
+          .social-heading-pre {
+            font-size: 1.15rem;
+          }
         }
       `}</style>
     </section>
