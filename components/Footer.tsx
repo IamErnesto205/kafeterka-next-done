@@ -74,8 +74,7 @@ export default function Footer() {
           <p>© 2026 Kafeterka. Všechna práva vyhrazena.</p>
           <div className="footer-legal">
             <a href="/podminky" target="_blank" rel="noopener noreferrer">Ochrana osobních údajů</a>
-            <a href="#">Podmínky použití</a>
-            <a href="#">Nastavení souborů cookie</a>
+            <button id="open-cookie-settings" style={{ background: "none", border: "none", color: "inherit", font: "inherit", cursor: "pointer", padding: 0, opacity: 0.7 }}>Nastavení souborů cookie</button>
           </div>
         </div>
       </div>
