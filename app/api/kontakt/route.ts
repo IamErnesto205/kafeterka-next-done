@@ -11,8 +11,8 @@ export async function POST(req: NextRequest) {
   }
 
   const { error } = await resend.emails.send({
-    from: "Kafeterka formulář <onboarding@resend.dev>",
-    to: "tesek.prsek@gmail.com",
+    from: "Kafeterka formulář <formular@kafeterka.cz>",
+    to: "kafeterka@email.cz",
     replyTo: email,
     subject: `Zpráva od ${jmeno}`,
     text: `Jméno: ${jmeno}\nE-mail: ${email}\n\nZpráva:\n${zprava}`,
