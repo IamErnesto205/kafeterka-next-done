@@ -17,7 +17,7 @@ export default function KontaktInfo() {
                 </div>
                 <div>
                   <span className="kontakt-detail-label">Napište nám</span>
-                  <a href="mailto:info@kafeterka.cz" className="kontakt-detail-value">info@kafeterka.cz</a>
+                  <a href="mailto:kafeterka@email.cz" className="kontakt-detail-value">kafeterka@email.cz</a>
                 </div>
               </div>
 
